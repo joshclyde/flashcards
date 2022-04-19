@@ -1,9 +1,22 @@
 <script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+import { RouterLink } from "vue-router";
+import { useFlashcardsStore } from "@/stores/flashcards";
+import HeadingOne from "@/components/HeadingOne.vue";
+
+const flashcardsStore = useFlashcardsStore();
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <HeadingOne>Flashcards</HeadingOne>
+    <nav>
+      <RouterLink
+        v-for="(value, key) in flashcardsStore.flashcardSets"
+        :key="key"
+        :to="`/review/${key}`"
+      >
+        {{ value.name }}
+      </RouterLink>
+    </nav>
   </main>
 </template>
