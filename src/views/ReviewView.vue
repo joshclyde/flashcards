@@ -29,13 +29,65 @@ const flashcardCurrentIndexMessage = computed(() => {
 </script>
 
 <template>
-  <HeadingOne>Reviewing Flashcards</HeadingOne>
-  <Link to="/">Home</Link>
-  <Text>{{ flashcardCurrentIndexMessage }}</Text>
-  <FrontBackFlashcard :set-id="flashcardSetId" :index="state.index" />
-  <Button :on-click="decrement" v-if="state.index > 0">Back</Button>
-  <Button :on-click="increment" v-if="state.index < lengthOfSet - 1"
-    >Next</Button
-  >
-  <Link to="/" v-if="state.index === lengthOfSet - 1">Finish</Link>
+  <div class="Container">
+    <div class="Heading-Container">
+      <HeadingOne>Reviewing Flashcards</HeadingOne>
+      <Link to="/">Home</Link>
+    </div>
+    <Text>{{ flashcardCurrentIndexMessage }}</Text>
+    <FrontBackFlashcard :set-id="flashcardSetId" :index="state.index" />
+    <div class="Button-Container">
+      <Button
+        :on-click="decrement"
+        v-if="state.index > 0"
+        className="Back-Button"
+        >Back</Button
+      >
+      <div></div>
+      <Button
+        :on-click="increment"
+        v-if="state.index < lengthOfSet - 1"
+        className="Next-Button"
+        >Next</Button
+      >
+      <Link
+        to="/"
+        v-if="state.index === lengthOfSet - 1"
+        className="Finish-Link"
+        >Finish</Link
+      >
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Heading-Container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Button-Container {
+  display: grid;
+  grid-template-columns: [first] 128px 1fr [last] 128px;
+  gap: 16px;
+}
+
+.Back-Button {
+  grid-column-start: first;
+}
+
+.Next-Button {
+  grid-column-start: last;
+}
+
+.Finish-Link {
+  grid-column-start: last;
+  justify-self: center;
+}
+</style>

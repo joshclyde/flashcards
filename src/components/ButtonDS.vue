@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const props = defineProps<{ onClick: () => void }>();
+const props = defineProps<{ onClick: () => void; className?: string }>();
 </script>
 
 <template>
-  <button @click="props.onClick"><slot /></button>
+  <button :class="props.className" @click="props.onClick"><slot /></button>
 </template>
 
 <style scoped>

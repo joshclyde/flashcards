@@ -31,5 +31,17 @@ const text = computed(() => {
 </script>
 
 <template>
-  <Text @click="toggle">{{ text }}</Text>
+  <div @click="toggle">
+    <Text>{{ text }}</Text>
+  </div>
 </template>
+
+<style scoped>
+div {
+  background-color: var(--black-theme-secondary-black);
+  margin: 16px 0;
+  padding: 8px;
+  border-radius: 2px;
+  min-height: 128px;
+}
+</style>

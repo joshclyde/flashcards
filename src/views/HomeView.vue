@@ -9,14 +9,20 @@ const flashcardsStore = useFlashcardsStore();
 <template>
   <main>
     <HeadingOne>Flashcards</HeadingOne>
-    <nav>
-      <RouterLink
-        v-for="(value, key) in flashcardsStore.flashcardSets"
-        :key="key"
-        :to="`/review/${key}`"
-      >
-        {{ value.name }}
-      </RouterLink>
-    </nav>
+    <RouterLink
+      v-for="(value, key) in flashcardsStore.flashcardSets"
+      :key="key"
+      :to="`/review/${key}`"
+    >
+      {{ value.name }}
+    </RouterLink>
   </main>
 </template>
+
+<style scoped>
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+</style>
