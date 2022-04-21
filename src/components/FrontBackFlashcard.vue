@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Text from "@/components/TextDS.vue";
 import { useFlashcardsStore } from "@/stores/flashcards";
 import { reactive, computed, watch } from "vue";
 const props = defineProps<{ setId: string; index: number }>();
@@ -30,5 +31,5 @@ const text = computed(() => {
 </script>
 
 <template>
-  <div @click="toggle">{{ text }}</div>
+  <Text @click="toggle">{{ text }}</Text>
 </template>

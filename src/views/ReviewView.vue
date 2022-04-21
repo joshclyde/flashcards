@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import HeadingOne from "@/components/HeadingOne.vue";
 import FrontBackFlashcard from "@/components/FrontBackFlashcard.vue";
+import Button from "@/components/ButtonDS.vue";
+import Text from "@/components/TextDS.vue";
+import Link from "@/components/LinkDS.vue";
 import { useFlashcardsStore } from "@/stores/flashcards";
 import { reactive, computed } from "vue";
 
@@ -27,10 +30,12 @@ const flashcardCurrentIndexMessage = computed(() => {
 
 <template>
   <HeadingOne>Reviewing Flashcards</HeadingOne>
-  <RouterLink to="/">Home</RouterLink>
-  <p>{{ flashcardCurrentIndexMessage }}</p>
+  <Link to="/">Home</Link>
+  <Text>{{ flashcardCurrentIndexMessage }}</Text>
   <FrontBackFlashcard :set-id="flashcardSetId" :index="state.index" />
-  <button @click="decrement" v-if="state.index > 0">Previous</button>
-  <button @click="increment" v-if="state.index < lengthOfSet - 1">Next</button>
-  <RouterLink to="/" v-if="state.index === lengthOfSet - 1">Finish</RouterLink>
+  <Button :on-click="decrement" v-if="state.index > 0">Back</Button>
+  <Button :on-click="increment" v-if="state.index < lengthOfSet - 1"
+    >Next</Button
+  >
+  <Link to="/" v-if="state.index === lengthOfSet - 1">Finish</Link>
 </template>

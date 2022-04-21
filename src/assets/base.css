@@ -1,1 +1,49 @@
-/* Put some CSS in here if you want. */
+:root {
+  --black-theme-black: #0d0d0d;
+  --black-theme-secondary-black: #212121;
+  --black-theme-white: #ffffff;
+  --black-theme-secondary-white: #ababab;
+  --black-theme-digital-blue: #50b8f3;
+  --primary-yellow: #e6db78;
+  --primary-light-yellow: #efe8a9;
+  --primary-dark-yellow: #b4ad6f;
+}
+
+body {
+  background-color: var(--black-theme-black);
+  margin: 16px 16px;
+}
+
+#app {
+  max-width: 1024px;
+  margin: auto;
+}
+
+* {
+  font-family: "Varela Round", "sans-serif", "apple color emoji";
+  font-weight: 400;
+}
+
+/*
+  For now, setting all elements focus state to a blue outline.
+  In the future, I may change this based off the element.
+*/
+*:focus {
+  outline: solid #78bae6 1px;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 
+  This is to style the a tag's within RouterLink. I was having trouble figuring out how to pass in
+  styles to RouterLink, so for now decided to just make some global styles.
+*/
+a {
+  color: var(--black-theme-digital-blue);
+}
+a:hover {
+  color: #a5daf9;
+}
+a:active {
+  color: #a1a8e8;
+}
