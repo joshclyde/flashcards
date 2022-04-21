@@ -2,6 +2,12 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+## Backlog
+
+- Look at Vue lint rules
+- Figure out how to hook up intellisense for CSS variables defined in base.css
+- Understand how TypeScript is applied to Vue components
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
