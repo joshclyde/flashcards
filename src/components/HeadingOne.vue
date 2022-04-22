@@ -4,7 +4,7 @@
 
 <style>
 h1 {
-  color: var(--primary-yellow);
+  color: var(--black-theme-white);
   margin: 16px 0;
 }
 </style>

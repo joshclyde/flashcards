@@ -8,20 +8,19 @@ const props = defineProps<{ onClick: () => void; className?: string }>();
 
 <style scoped>
 button {
-  color: var(--primary-yellow);
-  background-color: var(--black-theme-secondary-black);
-  /* border: 1px solid var(--primary-yellow);
-  border-radius: 2px; */
-  padding: 0 8px;
+  color: var(--black-theme-black);
+  background-color: var(--black-theme-white);
+  padding: 0 16px;
   height: 32px;
   border: none;
-  border-radius: 2px;
+  border-radius: 16px;
+  cursor: pointer;
 
   /* Border was increasing the size of the element, so switched to box-shadow. */
-  -webkit-box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
+  /* TODO: When making secondary button, use this. */
+  /* -webkit-box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
   -moz-box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
-  box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
-  cursor: pointer;
+  box-shadow: inset 0px 0px 0px 1px var(--primary-yellow); */
 }
 
 button:active,
@@ -33,11 +32,10 @@ button:hover {
 }
 
 button:hover {
-  background-color: var(--primary-yellow);
-  color: var(--black-theme-secondary-black);
+  background-color: var(--black-theme-secondary-white);
 }
 
 button:active {
-  background-color: var(--primary-dark-yellow);
+  background-color: var(--black-theme-tertiary-white);
 }
 </style>
