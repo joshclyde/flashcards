@@ -28,7 +28,7 @@ const shouldDisplayHomeLink = computed(() => {
   <header>
     <div class="Heading-Container">
       <HeadingOne class-name="Heading">{{ text }}</HeadingOne>
-      <LinkDS to="/" v-if="shouldDisplayHomeLink">Home</LinkDS>
+      <LinkDS v-if="shouldDisplayHomeLink" to="/">Home</LinkDS>
     </div>
     <LineBreak />
   </header>

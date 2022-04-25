@@ -18,4 +18,16 @@ module.exports = {
       extends: ["plugin:cypress/recommended"],
     },
   ],
+  rules: {
+    "vue/script-setup-uses-vars": "error",
+    "vue/attributes-order": "error",
+    "vue/component-tags-order": [
+      "error",
+      { order: ["script", "template", "style"] },
+    ],
+    "vue/no-v-html": "error",
+    "vue/order-in-components": "error",
+    "vue/block-lang": ["error", { script: { lang: "ts" } }],
+    "vue/component-name-in-template-casing": ["error", "PascalCase"],
+  },
 };

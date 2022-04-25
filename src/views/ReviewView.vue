@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HeadingOne from "@/components/HeadingOne.vue";
 import FrontBackFlashcard from "@/components/FrontBackFlashcard.vue";
 import Button from "@/components/ButtonDS.vue";
 import Text from "@/components/TextDS.vue";
@@ -34,21 +33,21 @@ const flashcardCurrentIndexMessage = computed(() => {
     <FrontBackFlashcard :set-id="flashcardSetId" :index="state.index" />
     <div class="Button-Container">
       <Button
-        :on-click="decrement"
         v-if="state.index > 0"
+        :on-click="decrement"
         className="Back-Button"
         >Back</Button
       >
       <div></div>
       <Button
-        :on-click="increment"
         v-if="state.index < lengthOfSet - 1"
+        :on-click="increment"
         className="Next-Button"
         >Next</Button
       >
       <Link
-        to="/"
         v-if="state.index === lengthOfSet - 1"
+        to="/"
         className="Finish-Link"
         >Finish</Link
       >
