@@ -30,10 +30,6 @@ const flashcardCurrentIndexMessage = computed(() => {
 
 <template>
   <div class="Container">
-    <div class="Heading-Container">
-      <HeadingOne>Reviewing Flashcards</HeadingOne>
-      <Link to="/">Home</Link>
-    </div>
     <Text>{{ flashcardCurrentIndexMessage }}</Text>
     <FrontBackFlashcard :set-id="flashcardSetId" :index="state.index" />
     <div class="Button-Container">
@@ -64,12 +60,6 @@ const flashcardCurrentIndexMessage = computed(() => {
 .Container {
   display: flex;
   flex-direction: column;
-}
-
-.Heading-Container {
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
 .Button-Container {

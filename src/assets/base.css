@@ -10,14 +10,22 @@
   --primary-dark-yellow: #b4ad6f;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--black-theme-black);
-  margin: 16px 16px;
+  height: 100%;
+  max-width: 512px;
+  margin: auto;
 }
 
 #app {
-  max-width: 512px;
-  margin: auto;
+  margin: 0 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 * {

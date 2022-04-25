@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const props = defineProps<{ className?: string }>();
+</script>
+
 <template>
-  <h1><slot /></h1>
+  <h1 :class="props.className"><slot /></h1>
 </template>
 
 <style>
