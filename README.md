@@ -8,10 +8,13 @@ This template should help get you started developing with Vue 3 in Vite.
 - Figure out how to hook up intellisense for CSS variables defined in base.css
 - Understand how TypeScript is applied to Vue components
 - Firebase stuff
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+    - (Make detailed documentation for all of this for future projects!)
+    - Deploy to Firebase
+    - Authenticated User
+    - Create, Read, Update, Delete Tags
+    - Create, Read, Update, Delete Flashcards
+    - Do a review session for a tag
+    - (Future) Set up a domain (maybe use sub domain instead of purchasing one)
 
 ## Type Support for `.vue` Imports in TS
 
@@ -23,10 +26,6 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
     1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
     2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
