@@ -6,9 +6,10 @@ This template should help get you started developing with Vue 3 in Vite.
 
 - Figure out how to hook up intellisense for CSS variables defined in base.css
 - Understand how TypeScript is applied to Vue components
+- Set font-size on components
 - Firebase stuff
     - (Make detailed documentation for all of this for future projects!)
-    - Deploy to Firebase
+    - Deploy to Firebase Action in repository
     - Authenticated User
     - Create, Read, Update, Delete Tags
     - Create, Read, Update, Delete Flashcards
