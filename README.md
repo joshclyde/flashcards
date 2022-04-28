@@ -17,6 +17,13 @@ A website for me to create and review flashcards. Also using Vue for the first t
   - Look up data in firebase config and whether it should not be public on my github repo
   - (Future) Set up a domain (maybe use sub domain instead of purchasing one)
   - Error handling
+- Redesign colors for button to allow a good design for a disabled button. 
+  - The current color for the buttons is white/grey/black. This causes issues because it clashes with what I’d expect a disabled button to look like. So now I’m having trouble coming up with a design for a disabled button.
+- Redesign colors for text input. 
+- Dark/Light theme
+- Enhance the Alert component
+  - success, warning, error, informational
+  - cleanly dismiss after some time (some line saying it'll dissapear, a closing animation rather than it being so sudden)
 
 ## Installation and Usage
 
