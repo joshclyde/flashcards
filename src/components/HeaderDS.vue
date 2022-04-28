@@ -10,17 +10,21 @@ const route = useRoute();
 const text = computed(() => {
   switch (true) {
     case route.name === "home":
-      return "Flashcards";
+      return "Memory";
     case route.name === "review":
       return "Reviewing Flashcards";
+    case route.name === "tags_create":
+      return "Create Tag";
     default:
       return "Flashcards";
   }
 });
 
-const routesWithHomeLink = ["review"];
+const routesWithoutHomeLink = ["home"];
 const shouldDisplayHomeLink = computed(() => {
-  return route.name && routesWithHomeLink.includes(route.name.toString());
+  return route.name
+    ? !routesWithoutHomeLink.includes(route.name.toString())
+    : true;
 });
 </script>
 

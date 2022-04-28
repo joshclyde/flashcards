@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import("../views/ReviewView.vue"),
       props: true,
     },
+    {
+      path: "/tags/create",
+      name: "tags_create",
+      component: () => import("../views/CreateTagView.vue"),
+    },
   ],
 });
 

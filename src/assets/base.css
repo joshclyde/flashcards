@@ -5,6 +5,7 @@
   --black-theme-secondary-white: #CCCCCC;
   --black-theme-tertiary-white: #B3B3B3;
   --black-theme-digital-blue: #50b8f3;
+  --black-theme-success: #6ED97F;
   --primary-yellow: #e6db78;
   --primary-light-yellow: #efe8a9;
   --primary-dark-yellow: #b4ad6f;
@@ -31,6 +32,7 @@ body {
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
+  color: var(--black-theme-white)
 }
 
 /*
@@ -56,4 +58,45 @@ a:hover {
 }
 a:active {
   color: #a1a8e8;
+}
+
+.button-common {
+  color: var(--black-theme-black);
+  background-color: var(--black-theme-white);
+  padding: 0 16px;
+  height: 32px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
+  /* Border was increasing the size of the element, so switched to box-shadow. */
+  /* TODO: When making secondary button, use this. */
+  /* -webkit-box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
+  -moz-box-shadow: inset 0px 0px 0px 1px var(--primary-yellow);
+  box-shadow: inset 0px 0px 0px 1px var(--primary-yellow); */
+}
+
+.button-common:active,
+.button-common:hover {
+  /* Turning off the box-shadow because the button will now be filled with a color. */
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.button-common:hover {
+  background-color: var(--black-theme-secondary-white);
+}
+
+.button-common:active {
+  background-color: var(--black-theme-tertiary-white);
+}
+
+.button-common:disabled {
+  cursor: not-allowed;
+}
+
+/* Might need to make this more specific in the future. */
+.formkit-message {
+  color: #E29292;
 }
