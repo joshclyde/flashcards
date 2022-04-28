@@ -95,3 +95,8 @@ a:active {
 .button-common:disabled {
   cursor: not-allowed;
 }
+
+/* Might need to make this more specific in the future. */
+.formkit-message {
+  color: #E29292;
+}
