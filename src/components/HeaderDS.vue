@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HeadingOne from "./HeadingOne.vue";
 import LineBreak from "./LineBreak.vue";
 import LinkDS from "./LinkDS.vue";
 
@@ -31,7 +30,7 @@ const shouldDisplayHomeLink = computed(() => {
 <template>
   <header>
     <div class="Heading-Container">
-      <HeadingOne class-name="Heading">{{ text }}</HeadingOne>
+      <josh-heading-1>{{ text }}</josh-heading-1>
       <LinkDS v-if="shouldDisplayHomeLink" to="/">Home</LinkDS>
     </div>
     <LineBreak />
@@ -47,9 +46,5 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.Heading {
-  margin-bottom: 24px;
 }
 </style>
